@@ -1,4 +1,5 @@
 import { useLoaderData } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 const Author = () => {
     const blog = useLoaderData();
@@ -34,5 +35,14 @@ const Author = () => {
         </div>
     );
 };
+
+Author.propTypes = {
+    name: PropTypes.string,
+    username: PropTypes.string,
+    profile_image: PropTypes.string,
+    github_username: PropTypes.string,
+    twitter_username: PropTypes.string,
+    website_url: PropTypes.string
+}
 
 export default Author;

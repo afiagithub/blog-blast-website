@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, Outlet, useLoaderData } from "react-router-dom";
 import { MdBookmarkAdd } from "react-icons/md";
 import { markBlog } from "../utils";
+import PropTypes from 'prop-types';
 
 const BlogDetails = () => {
     const blog = useLoaderData();
@@ -59,5 +60,13 @@ const BlogDetails = () => {
         </div>
     );
 };
+
+BlogDetails.propTypes = {
+    title: PropTypes.string,
+    reading_time_minutes: PropTypes.number,
+    comments_count: PropTypes.number,
+    published_at: PropTypes.string,
+    public_reactions_count: PropTypes.number
+}
 
 export default BlogDetails;

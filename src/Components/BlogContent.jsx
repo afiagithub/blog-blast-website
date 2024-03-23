@@ -34,7 +34,12 @@ const BlogContent = () => {
 };
 
 BlogContent.propTypes = {
-    
+    title: PropTypes.string,
+    body_html: PropTypes.string,
+    cover_image: PropTypes.string,
+    published_at: PropTypes.string,
+    url: PropTypes.string,
+    tags: PropTypes.array
 }
 
 export default BlogContent;
