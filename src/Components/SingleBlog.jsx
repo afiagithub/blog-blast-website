@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 import generalImage from '../assets/404.jpg'
 
 const SingleBlog = ({blog}) => {
-    const {title, description, cover_image, published_at} = blog;
+    const {id, title, description, cover_image, published_at} = blog;
     return (
-        <Link to='/' className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:dark:bg-gray-900">
+        <Link to={`/blogs/${id}`} className="max-w-sm mx-auto group transition border-2 hover:scale-105 
+        border-primary hover:border-secondary hover:no-underline focus:no-underline dark:dark:bg-gray-900">
             <img role="presentation" className="object-cover w-full rounded h-44 dark:dark:bg-gray-500" 
             src={cover_image || generalImage} />
             <div className="p-6 space-y-2">

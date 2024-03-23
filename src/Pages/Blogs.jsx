@@ -21,9 +21,6 @@ const Blogs = () => {
                         allBlogs.map(blog => <SingleBlog key={blog.id} blog={blog}></SingleBlog>)
                     }
                 </div>
-                <div className="flex justify-center">
-                    <button type="button" className="px-6 py-3 text-sm rounded-md hover:underline dark:dark:bg-gray-900 dark:dark:text-gray-400">Load more posts...</button>
-                </div>
             </div>
         </section>
     );
