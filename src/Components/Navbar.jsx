@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 
 const Navbar = () => {
@@ -33,8 +33,8 @@ const Navbar = () => {
                     <NavLink to="/bookmarks" className={({isActive}) => isActive? "text-primary" : ""}>Bookmarks</NavLink>
                     </ul>
                 </div>
-                <a className="btn btn-ghost font-bold text-3xl text-primary gap-0">Blog
-                <span className="text-secondary">Blast</span></a>
+                <Link to="/" className="btn btn-ghost font-bold text-3xl text-primary gap-0">Blog
+                <span className="text-secondary">Blast</span></Link>
             </div>
             <div className="navbar-end flex gap-3">
                 <ul className="menu menu-horizontal px-1 text-base font-bold gap-6 items-center hidden lg:flex">                    
